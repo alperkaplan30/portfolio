@@ -135,13 +135,13 @@ watch(() => route.path, closeMenu)
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-2"
     >
-      <div v-if="isMenuOpen" class="glass border-t border-surface-200/50 dark:border-surface-800/50 md:hidden">
-        <div class="container-page flex flex-col gap-4 py-6">
+      <div v-if="isMenuOpen" class="glass max-h-[80vh] overflow-y-auto border-t border-surface-200/50 dark:border-surface-800/50 md:hidden">
+        <div class="container-page flex flex-col gap-1 py-4">
           <NuxtLink
             v-for="link in navLinks"
             :key="link.to"
             :to="link.to"
-            class="text-base font-medium text-surface-600 transition-colors hover:text-surface-900 dark:text-surface-400 dark:hover:text-surface-100"
+            class="rounded-lg px-3 py-3 text-base font-medium text-surface-600 transition-colors hover:bg-surface-100 hover:text-surface-900 dark:text-surface-400 dark:hover:bg-surface-800 dark:hover:text-surface-100"
             :class="{ '!text-accent': route.path === link.to }"
             @click="closeMenu"
           >
@@ -152,7 +152,7 @@ watch(() => route.path, closeMenu)
           <a
             href="/images/AlperKaplan_CV.pdf"
             download="AlperKaplan_CV.pdf"
-            class="flex w-fit items-center gap-2 rounded-lg border border-accent/40 px-4 py-2 text-sm font-medium text-accent transition-all hover:bg-accent hover:text-white"
+            class="mt-2 flex w-fit items-center gap-2 rounded-lg border border-accent/40 px-4 py-2.5 text-sm font-medium text-accent transition-all hover:bg-accent hover:text-white"
             @click="closeMenu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -163,7 +163,7 @@ watch(() => route.path, closeMenu)
             CV
           </a>
 
-          <div class="mt-2 flex items-center gap-4">
+          <div class="mt-3 flex items-center gap-4 border-t border-surface-200/50 pt-3 dark:border-surface-800/50">
             <!-- Mobile Language Toggle -->
             <button
               class="relative flex h-8 w-16 items-center rounded-full border border-surface-200 bg-surface-100 p-0.5 dark:border-surface-700 dark:bg-surface-800"

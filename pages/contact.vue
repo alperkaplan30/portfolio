@@ -40,22 +40,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pt-24">
+  <div class="pt-16 md:pt-20 lg:pt-24">
     <!-- Page Header -->
-    <section class="container-page py-16 md:py-20">
+    <section class="container-page py-10 md:py-14 lg:py-20">
       <div class="max-w-2xl">
-        <h1 class="page-header-animate font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 class="page-header-animate font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl">
           {{ t.contact.title }}
         </h1>
-        <p class="page-header-animate mt-4 text-lg text-surface-500 dark:text-surface-400">
+        <p class="page-header-animate mt-3 text-base text-surface-500 dark:text-surface-400 sm:mt-4 sm:text-lg">
           {{ t.contact.subtitle }}
         </p>
       </div>
     </section>
 
     <!-- Contact Content -->
-    <section class="container-page pb-20">
-      <div class="grid gap-12 lg:grid-cols-5 lg:gap-16">
+    <section class="container-page pb-14 md:pb-20">
+      <div class="grid gap-8 md:gap-12 lg:grid-cols-5 lg:gap-16">
         <!-- Contact Form -->
         <div class="contact-reveal lg:col-span-3">
           <form class="space-y-6" @submit.prevent="handleSubmit">
@@ -150,7 +150,7 @@ onMounted(() => {
         </div>
 
         <!-- Contact Info Sidebar -->
-        <div class="contact-reveal space-y-8 lg:col-span-2">
+        <div class="contact-reveal space-y-6 md:space-y-8 lg:col-span-2">
           <!-- Direct Contact -->
           <div>
             <h3 class="mb-4 font-display text-lg font-semibold">

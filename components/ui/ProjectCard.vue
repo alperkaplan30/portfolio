@@ -41,8 +41,8 @@ const cardClass = 'group block overflow-hidden rounded-2xl border border-surface
         v-if="project.image"
         :src="project.image"
         :alt="project.title"
-        class="h-full w-full object-cover"
-        :class="project.imageClass"
+        class="h-full w-full"
+        :class="project.imageClass ?? 'object-cover'"
         @error="(e) => (e.target as HTMLImageElement).style.display = 'none'"
       />
       <div class="absolute inset-0 flex items-center justify-center opacity-30">
@@ -82,8 +82,8 @@ const cardClass = 'group block overflow-hidden rounded-2xl border border-surface
         v-if="project.image"
         :src="project.image"
         :alt="project.title"
-        class="h-full w-full object-cover"
-        :class="project.imageClass"
+        class="h-full w-full"
+        :class="project.imageClass ?? 'object-cover'"
         @error="(e) => (e.target as HTMLImageElement).style.display = 'none'"
       />
       <div class="absolute inset-0 flex items-center justify-center opacity-30">

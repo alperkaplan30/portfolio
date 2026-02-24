@@ -72,7 +72,7 @@ onUnmounted(() => {
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="section-padding relative flex min-h-[90vh] items-center pt-32">
+    <section class="section-padding relative flex min-h-[85vh] items-center pt-20 md:pt-28 lg:pt-32">
       <!-- Subtle background gradient -->
       <div class="pointer-events-none absolute inset-0 overflow-hidden">
         <div class="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
@@ -81,24 +81,24 @@ onUnmounted(() => {
 
       <div class="container-page relative">
         <div class="max-w-3xl">
-          <p class="hero-animate mb-4 text-sm font-medium uppercase tracking-widest text-accent">
+          <p class="hero-animate mb-3 text-xs font-medium uppercase tracking-widest text-accent sm:mb-4 sm:text-sm">
             {{ t.home.greeting }}
           </p>
 
-          <h1 class="hero-animate font-display text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 class="hero-animate font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             {{ t.home.heroTitle1 }}
             <span class="text-gradient">{{ t.home.heroTitle2 }}</span>
           </h1>
 
-          <p class="hero-animate mt-3 text-xl font-medium text-surface-500 dark:text-surface-400 sm:text-2xl">
+          <p class="hero-animate mt-2 text-lg font-medium text-surface-500 dark:text-surface-400 sm:mt-3 sm:text-xl md:text-2xl">
             <span>{{ typedText }}</span><span class="typewriter-cursor">|</span>
           </p>
 
-          <p class="hero-animate mt-6 max-w-xl text-lg leading-relaxed text-surface-500 dark:text-surface-400 sm:text-xl">
+          <p class="hero-animate mt-4 max-w-sm text-base leading-relaxed text-surface-500 dark:text-surface-400 sm:mt-6 sm:max-w-xl sm:text-lg md:text-xl">
             {{ t.home.tagline }}
           </p>
 
-          <div class="hero-animate mt-10 flex flex-wrap gap-4">
+          <div class="hero-animate mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <UiBaseButton to="/projects" variant="primary">
               {{ t.home.viewProjects }}
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

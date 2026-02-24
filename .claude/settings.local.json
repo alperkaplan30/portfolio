@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s https://raw.githubusercontent.com/alperkaplan30/mekanbul/odev8/README.md)"
+    ]
+  }
+}

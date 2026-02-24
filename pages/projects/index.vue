@@ -28,22 +28,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pt-24">
+  <div class="pt-16 md:pt-20 lg:pt-24">
     <!-- Page Header -->
-    <section class="container-page py-16 md:py-20">
+    <section class="container-page py-10 md:py-14 lg:py-20">
       <div class="max-w-2xl">
-        <h1 class="page-header-animate font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 class="page-header-animate font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl">
           {{ t.projects.title }}
         </h1>
-        <p class="page-header-animate mt-4 text-lg text-surface-500 dark:text-surface-400">
+        <p class="page-header-animate mt-3 text-base text-surface-500 dark:text-surface-400 sm:mt-4 sm:text-lg">
           {{ t.projects.description }}
         </p>
       </div>
     </section>
 
     <!-- Projects Grid -->
-    <section class="container-page pb-20">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <section class="container-page pb-14 md:pb-20">
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         <div
           v-for="project in projects"
           :key="project.id"

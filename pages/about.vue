@@ -27,25 +27,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pt-24">
+  <div class="pt-16 md:pt-20 lg:pt-24">
     <!-- Page Header -->
-    <section class="container-page py-16 md:py-20">
+    <section class="container-page py-10 md:py-14 lg:py-20">
       <div class="max-w-2xl">
-        <h1 class="page-header-animate font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 class="page-header-animate font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl">
           {{ t.about.title }}
         </h1>
-        <p class="page-header-animate mt-4 text-lg text-surface-500 dark:text-surface-400">
-          {{ t.about.subtitle }}
+        <p class="page-header-animate mt-3 text-base text-surface-500 dark:text-surface-400 sm:mt-4 sm:text-lg">
+          {{ t.about.subtitle1 }} <span class="text-accent">{{ t.about.subtitle2 }}</span>
         </p>
       </div>
     </section>
 
     <!-- Bio Section -->
-    <section class="container-page pb-16">
-      <div class="grid gap-12 lg:grid-cols-5 lg:gap-16">
+    <section class="container-page pb-10 md:pb-14 lg:pb-16">
+      <div class="grid gap-8 md:gap-12 lg:grid-cols-5 lg:gap-16">
         <!-- Portrait -->
-        <div class="about-reveal lg:col-span-2">
-          <div class="aspect-[4/5] overflow-hidden rounded-2xl border border-surface-200 dark:border-surface-800">
+        <div class="about-reveal mx-auto w-full max-w-xs sm:max-w-sm lg:col-span-2 lg:mx-0 lg:max-w-none">
+          <div class="aspect-square overflow-hidden rounded-2xl border border-surface-200 dark:border-surface-800 sm:aspect-[4/5]">
             <img
               src="/images/about.jpg"
               alt="Alper Kaplan"
@@ -55,13 +55,13 @@ onMounted(() => {
         </div>
 
         <!-- Bio Content -->
-        <div class="about-reveal space-y-6 lg:col-span-3">
-          <h2 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">
+        <div class="about-reveal space-y-5 lg:col-span-3 lg:space-y-6">
+          <h2 class="font-display text-xl font-bold tracking-tight sm:text-2xl lg:text-3xl">
             {{ t.about.bioTitle1 }}
             <span class="text-gradient">{{ t.about.bioTitle2 }}</span>
           </h2>
 
-          <div class="space-y-4 text-base leading-relaxed text-surface-600 dark:text-surface-400">
+          <div class="space-y-3 text-sm leading-relaxed text-surface-600 dark:text-surface-400 sm:text-base sm:leading-relaxed">
             <p>{{ t.about.bio1 }}</p>
             <p>{{ t.about.bio2 }}</p>
             <p>{{ t.about.bio3 }}</p>
@@ -80,11 +80,11 @@ onMounted(() => {
           />
         </div>
 
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           <div
             v-for="skillGroup in skills"
             :key="skillGroup.category"
-            class="about-reveal group/card rounded-2xl border border-surface-200/60 bg-white/50 p-6 transition-all duration-300 hover:border-surface-300 hover:shadow-lg hover:shadow-surface-200/50 dark:border-surface-800/60 dark:bg-surface-900/50 dark:hover:border-surface-700 dark:hover:shadow-surface-950/50"
+            class="about-reveal group/card rounded-2xl border border-surface-200/60 bg-white/50 p-4 transition-all duration-300 hover:border-surface-300 hover:shadow-lg hover:shadow-surface-200/50 dark:border-surface-800/60 dark:bg-surface-900/50 dark:hover:border-surface-700 dark:hover:shadow-surface-950/50 sm:p-6"
           >
             <UiSkillIcon :category="skillGroup.category" />
 
