@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "slug": "a-baller",
+    "title": "A Baller",
+    "description": "Wordle style footballer guessing mobile app.",
+    "longDescription": "A Baller is a mobile game inspired by Wordle, but focused entirely on football. Players are given visual and statistical clues to guess a mystery footballer each day. Built with React Native and Expo for cross-platform support, it uses Zustand for lightweight state management. The game features daily challenges, a streak system, and a growing database of players from top leagues around the world.",
+    "tags": ["React Native", "Expo", "TypeScript", "Zustand"],
+    "image": "/images/aballer_logo.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2024"
+  },
+  {
+    "id": 2,
+    "slug": "gametrans",
+    "title": "GameTrans",
+    "description": "A real-time game subtitle translator.",
+    "longDescription": "GameTrans is a desktop tool that captures on-screen text from any game in real time and translates it instantly using the DeepL API. It leverages EasyOCR with CUDA acceleration to process frames at high speed, and a smart cache system avoids re-translating repeated strings, keeping latency minimal. Designed for players who want to enjoy foreign-language games without switching windows.",
+    "tags": ["EasyOCR", "CUDA", "DeepL API", "Cache System"],
+    "image": "/images/GameTrans_logo.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "slug": "mysterious-glove",
+    "title": "Mysterious Glove",
+    "description": "It is a third-person character-based game on survival against bots.",
+    "longDescription": "Mysterious Glove is a third-person survival game built in Unreal Engine 5. The player controls a unique glove-based character navigating an eerie environment while fending off increasingly intelligent bots. The project makes heavy use of UE5 Blueprints for rapid prototyping alongside custom C++ logic for performance-critical gameplay systems such as AI pathfinding and combat mechanics.",
+    "tags": ["Unreal Engine 5", "C++", "Blueprint"],
+    "image": "/images/project-3.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2023"
+  },
+  {
+    "id": 4,
+    "slug": "cinesatchel",
+    "title": "Cinesatchel",
+    "description": "A TV series and movie website based on Netflix as requirements.",
+    "longDescription": "Cinesatchel is a Netflix-inspired web app for discovering and browsing movies and TV series. Built with React and SASS, it fetches data from a public movie API to display trending content, detailed show pages, and category-based browsing. The project was deployed on Vercel and focused on replicating a polished streaming-platform UI with smooth transitions and responsive design.",
+    "tags": ["JavaScript", "React", "SASS", "Vercel"],
+    "image": "/images/project-4.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2023"
+  },
+  {
+    "id": 5,
+    "slug": "mekanbul",
+    "title": "MekanBul",
+    "description": "A location-based venue discovery platform.",
+    "longDescription": "MekanBul is a venue discovery platform that helps users find places to visit — cafes, restaurants, and social spots — based on their current location or a searched area. Built with JavaScript and Pug templating and hosted on Replit, it provides a clean interface for filtering and exploring local venues with a focus on simplicity and fast load times.",
+    "tags": ["JavaScript", "Pug", "HTML", "Replit"],
+    "image": "/images/project-5.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2023"
+  },
+  {
+    "id": 6,
+    "slug": "portfolio-template",
+    "title": "Portfolio Template",
+    "description": "Minimal and elegant portfolio template with dark mode, smooth animations, and full responsiveness.",
+    "longDescription": "A fully featured personal portfolio template built with Nuxt 3, GSAP, and Tailwind CSS. It includes dark/light mode via @nuxtjs/color-mode, GSAP-powered scroll reveal and hero entrance animations, a typewriter effect, multilingual support (TR/EN), and a static SSG deployment pipeline targeting Vercel. Designed to be minimal, fast, and easily customizable.",
+    "tags": ["Nuxt 3", "GSAP", "Tailwind CSS", "Vercel"],
+    "image": "/images/project-6.jpg",
+    "url": "#",
+    "github": "#",
+    "year": "2025"
+  }
+]

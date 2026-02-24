@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Programming Languages",
+    "items": ["JavaScript", "TypeScript", "Python", "C", "C++"]
+  },
+  {
+    "category": "Technologies",
+    "items": ["Node.js", "Vue.js", "Express.js", "Socket.io", "Expo", "MongoDB-Mongoose", "REST APIs", "Nuxt", "React", "React Native", "jQuery", "Redux", "HTML", "CSS", "Tailwind CSS", "Pug", "SASS", "AWS"]
+  },
+  {
+    "category": "Tools & Workflow",
+    "items": ["Git/GitHub", "Docker", "VS Code", "Vercel", "CI/CD", "Postman", "Agile/Scrum"]
+  },
+  {
+    "category": "Other",
+    "items": ["Web Performance", "Accessibility", "Responsive Design", "Animation", "UI/UX"]
+  }
+]
