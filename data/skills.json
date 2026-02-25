@@ -5,7 +5,7 @@
   },
   {
     "category": "Technologies",
-    "items": ["Node.js", "Vue.js", "Express.js", "Socket.io", "Expo", "MongoDB-Mongoose", "REST APIs", "Nuxt.js", "React", "React Native", "jQuery", "Redux", "HTML", "CSS", "Tailwind CSS", "Pug", "SASS", "AWS"]
+    "items": ["Node.js", "Vue.js", "Express.js", "Socket.io", "Expo", "MongoDB-Mongoose", "REST APIs", "Nuxt.js", "React", "React Native", "jQuery", "Redux", "HTML", "CSS", "Tailwind CSS", "Pug", "SASS", "AWS", "GSAP"]
   },
   {
     "category": "Tools & Workflow",
