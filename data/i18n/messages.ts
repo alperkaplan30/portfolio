@@ -48,8 +48,6 @@ export const en = {
     bio3: "I primarily work with JavaScript, TypeScript, Vue.js, React, React Native, Node.js, and Python. I focus on front-end and mobile development and actively use tools like Claude Code and Cursor to accelerate my workflows and deliver better quality software.",
     skillsTitle: 'Skills & Tools',
     skillsSub: 'Technologies and tools I use to bring ideas to life.',
-    philosophyTitle: 'My Philosophy',
-    philosophyDesc: "Great software is invisible — it empowers without getting in the way. I focus on performance, accessibility, and clean design so that users can focus on what matters to them. Every line of code should serve a purpose.",
   },
   contact: {
     title: 'Get in Touch',
@@ -127,8 +125,6 @@ export const tr = {
     bio3: 'Ağırlıklı olarak JavaScript, TypeScript, Vue.js, React, React Native, Node.js ve Python ile çalışıyorum. Frontend ve mobil geliştirmeye odaklanıyor; Claude Code ve Cursor gibi araçları etkin biçimde kullanarak daha hızlı ve kaliteli yazılımlar üretiyorum.',
     skillsTitle: 'Yetenekler & Araçlar',
     skillsSub: 'Kullandığım teknolojiler ve araçlar.',
-    philosophyTitle: 'Felsefem',
-    philosophyDesc: 'Harika yazılım görünmezdir — engel olmadan güçlendirir. Kullanıcıların kendileri için önemli olan şeylere odaklanabilmeleri için performans, erişilebilirlik ve temiz tasarıma odaklanıyorum. Her satır kodun bir amaca hizmet etmesi gerekir.',
   },
   contact: {
     title: 'İletişime Geç',

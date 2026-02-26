@@ -25,18 +25,19 @@ const focusedField = ref<string | null>(null)
 const status = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
 
 async function handleSubmit() {
+  const name = form.name.trim()
+  const email = form.email.trim()
+  const subject = form.subject.trim()
+  const message = form.message.trim()
+
+  if (!name || !email || !subject || !message) return
+
   status.value = 'loading'
   try {
     await emailjs.send(
       config.public.emailjsServiceId,
       config.public.emailjsTemplateId,
-      {
-        name: form.name,
-        from_name: form.name,
-        from_email: form.email,
-        subject: form.subject,
-        message: form.message,
-      },
+      { name, from_name: name, from_email: email, subject, message },
       config.public.emailjsPublicKey,
     )
     status.value = 'success'
@@ -96,6 +97,7 @@ onMounted(() => {
                 id="name"
                 v-model="form.name"
                 type="text"
+                required
                 :placeholder="t.contact.namePlaceholder"
                 class="w-full rounded-xl border border-surface-300 bg-white px-4 py-3 text-surface-900 outline-none transition-all duration-200 placeholder:text-surface-400 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-600 dark:focus:border-accent"
                 :class="{ 'border-accent ring-2 ring-accent/20': focusedField === 'name' }"
@@ -116,6 +118,7 @@ onMounted(() => {
                 id="email"
                 v-model="form.email"
                 type="email"
+                required
                 :placeholder="t.contact.emailPlaceholder"
                 class="w-full rounded-xl border border-surface-300 bg-white px-4 py-3 text-surface-900 outline-none transition-all duration-200 placeholder:text-surface-400 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-600 dark:focus:border-accent"
                 :class="{ 'border-accent ring-2 ring-accent/20': focusedField === 'email' }"
@@ -136,6 +139,7 @@ onMounted(() => {
                 id="subject"
                 v-model="form.subject"
                 type="text"
+                required
                 :placeholder="t.contact.subjectPlaceholder"
                 class="w-full rounded-xl border border-surface-300 bg-white px-4 py-3 text-surface-900 outline-none transition-all duration-200 placeholder:text-surface-400 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-600 dark:focus:border-accent"
                 :class="{ 'border-accent ring-2 ring-accent/20': focusedField === 'subject' }"
@@ -156,6 +160,7 @@ onMounted(() => {
                 id="message"
                 v-model="form.message"
                 rows="5"
+                required
                 :placeholder="t.contact.messagePlaceholder"
                 class="w-full resize-none rounded-xl border border-surface-300 bg-white px-4 py-3 text-surface-900 outline-none transition-all duration-200 placeholder:text-surface-400 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-600 dark:focus:border-accent"
                 :class="{ 'border-accent ring-2 ring-accent/20': focusedField === 'message' }"
