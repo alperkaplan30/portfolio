@@ -31,6 +31,7 @@ async function handleSubmit() {
       config.public.emailjsServiceId,
       config.public.emailjsTemplateId,
       {
+        name: form.name,
         from_name: form.name,
         from_email: form.email,
         subject: form.subject,
@@ -172,7 +173,7 @@ onMounted(() => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </UiBaseButton>
-              <p v-if="status === 'success'" class="text-sm text-green-500">
+              <p v-if="status === 'success'" class="text-sm text-accent">
                 {{ t.contact.successMsg }}
               </p>
               <p v-if="status === 'error'" class="text-sm text-red-500">
