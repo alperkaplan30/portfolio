@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import emailjs from '@emailjs/browser'
 import socials from '~/data/socials.json'
 
 const { t } = useI18n()
+const config = useRuntimeConfig()
 
 useHead({
   title: 'Contact | Portfolio',
@@ -20,9 +22,31 @@ const form = reactive({
 })
 
 const focusedField = ref<string | null>(null)
+const status = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-function handleSubmit() {
-  alert('This is a static form demo. Connect to a form service like Formspree or Netlify Forms for production.')
+async function handleSubmit() {
+  status.value = 'loading'
+  try {
+    await emailjs.send(
+      config.public.emailjsServiceId,
+      config.public.emailjsTemplateId,
+      {
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject,
+        message: form.message,
+      },
+      config.public.emailjsPublicKey,
+    )
+    status.value = 'success'
+    form.name = ''
+    form.email = ''
+    form.subject = ''
+    form.message = ''
+  }
+  catch {
+    status.value = 'error'
+  }
 }
 
 onMounted(() => {
@@ -140,12 +164,21 @@ onMounted(() => {
             </div>
 
             <!-- Submit -->
-            <UiBaseButton variant="primary" class="w-full sm:w-auto">
-              {{ t.contact.send }}
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-              </svg>
-            </UiBaseButton>
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <UiBaseButton variant="primary" class="w-full sm:w-auto" :disabled="status === 'loading'">
+                <span v-if="status === 'loading'">{{ t.contact.sending }}</span>
+                <span v-else>{{ t.contact.send }}</span>
+                <svg v-if="status !== 'loading'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </UiBaseButton>
+              <p v-if="status === 'success'" class="text-sm text-green-500">
+                {{ t.contact.successMsg }}
+              </p>
+              <p v-if="status === 'error'" class="text-sm text-red-500">
+                {{ t.contact.errorMsg }}
+              </p>
+            </div>
           </form>
         </div>
 
